@@ -1,0 +1,586 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --font-color: #333;
+    --background-col:#b6b4b4;
+    --card-color:#fff ;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-col);
+}
+
+.welcomePage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.cardContainer {
+    background: var(--card-color);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    height: 600px;
+    width: 450px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+    }
+.cardContainer h1 {
+    font-size: 3rem;
+    color: var(--font-color);
+}
+.welcomeBtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newGameBtn, .continueGameBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--font-color);
+    color: var(--card-color);
+    transition: background-color 0.3s ease;
+}
+
+.newGameBtn:hover, .continueGameBtn:hover {
+    background-color: #555;
+}
+
+/* ================= COMMON HEADER ================= */
+.returnBtn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ================= GAME RULES PAGE ================= */
+
+/* Header */
+.gamerulesHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background-color: #444;
+    color: #fff;
+}
+
+.returnBtn {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Main container */
+.setRules {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: var(--card-color);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.setRules h2 {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--background-col);
+    font-size: 1.6rem;
+}
+
+/* Sections */
+.ruleContainer section {
+    background-color: #f7f7f7;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin:10px
+}
+
+/* Section headings */
+.ruleContainer h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.playerSection select {
+    width: 280px
+}
+
+#playerNames     {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+/* Rows (cardRow, bonusRow, meldRow, methodOption, deadwoodRow) */
+.cardRow, .bonusRow, .meldRow, .methodOption, .deadwoodRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Label styling */
+label {
+    min-width: 140px;
+    font-size: 14px;
+}
+
+/* Inputs */
+input[type="number"] {
+    width: 80px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    font-size: 14px;
+    text-align: center;
+}
+
+select {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Plus / Minus buttons */
+.decreaseBtn, .increaseBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.decreaseBtn:hover, .increaseBtn:hover {
+    background-color: #666;
+}
+
+/* Win streak section */
+#winStreakSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#winStreakSection select {
+    width: 150px;
+}
+
+.streakValueButton{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+
+/* Fight rules */
+#fightRulesSection .methodOption {
+    align-items: center;
+}
+
+.deadwoodRow {
+    flex-wrap: wrap;
+}
+
+/* Footer (like page 3) */
+.gamerulesFooter {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 10px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+}
+
+.gamerulesFooter button {
+    flex: 1;
+    padding: 14px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--font-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.gamerulesFooter button:hover {
+    background-color: #555;
+}
+/* ================= SCORE PAGE HEADER ================= */
+.scoreHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #444;
+    color: #fff;
+}
+
+
+/* ================= ROUND CONTAINER ================= */
+.roundDetails {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--card-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ================= ROUND INDICATOR ================= */
+.roundIndicator {
+    text-align: center;
+    background-color: var(--background-col);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* ================= SECTION CARD STYLE ================= */
+.roundDetails section {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ================= SECTION TITLES ================= */
+.roundDetails h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--font-color);
+    margin-bottom: 10px;
+}
+
+/* ================= ROW STYLE (PAGE 2 FEEL) ================= */
+.roundDetails .cardDivs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+}
+
+.roundDetails .cardDivs label {
+    flex: 1;
+}
+
+/* ================= COUNTER INPUT ================= */
+.roundDetails .counterInput {
+    width: 70px;
+    text-align: center;
+}
+
+/* ================= WIN METHOD ================= */
+.winMethodSection label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ================= WINNER SCOREBOARD ================= */
+.winnerScoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.rightside {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.scoreboardBtn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--font-color);
+}
+
+/* ================= FIGHT SECTION ================= */
+.fightSection .cardDivs {
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ================= ROUND FOOTER ================= */
+.roundFooter {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 40px;
+    padding-top: 10px;
+    border-top: 2px solid #ddd;
+}
+
+.roundFooter button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--font-color);
+    color: #fff;
+    font-size: 14px;
+}
+
+.roundFooter button:hover {
+    background-color: #555;
+}
+
+/* ================= SCOREBOARD MODAL ================= */
+/* scoreboard modal styles */
+.scoreboard-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 12px;
+}
+
+.scoreboard-card {
+  width: min(95%, 900px);
+  max-height: 85%;
+  overflow: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-family: Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.scoreboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.scoreboard-content {
+  /* content area — left empty so JS can inject the table + summary */
+}
+
+/* close button simple style */
+.closeBtn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/* ===== SCOREBOARD TABLE (FINAL ALIGNMENT FIX) ===== */
+
+.scoreboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 🔑 REQUIRED */
+  font-size: 14px;
+}
+
+.scoreboard-table th,
+.scoreboard-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* name column */
+.scoreboard-table th:first-child,
+.scoreboard-table td:first-child {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* diagonal cells */
+.scoreboard-table td {
+  vertical-align: middle;
+}
+
+/* net column emphasis */
+.scoreboard-table th:last-child,
+.scoreboard-table td:last-child {
+  font-weight: 700;
+}
+
+
+/*=======media queries=======*/
+@media (max-width: 480px) {
+    .cardContainer {
+        height: 100%;
+        width: 100%;
+        padding: 30px;
+        border-radius: 0;
+    }
+
+    .newGameBtn, .continueGameBtn {
+        font-size: 16px;
+    }
+
+    .setRules, .roundDetails {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .setRules, .gamerulesHeader .gamerulesFooter{
+        width: 100%; 
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .cardRow label {
+        max-width: 50px;
+        font-size: 13px;
+    }
+
+    #playerNames {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  #playerNames input {
+    display: flex;
+    width: 100%;     /* so names don't overflow */
+    box-sizing: border-box;
+  }
+  
+
+  /* Let label size itself to its text */
+  .cardRow label,
+  .bonusRow label,
+  .meldRow label,   
+  .cardDivs label {
+    flex: 0 0 80px;        /* 👈 consistent label column */
+    max-width: 80px;
+    min-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+    @media (max-width: 480px) {
+
+  /* Modal overlay */
+  .scoreboard-modal {
+    position: fixed;
+    inset: 0;
+    padding: 6px;
+    z-index: 5000;
+  }
+
+  /* Modal card */
+  .scoreboard-card {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;   /* stop page-level overflow */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Content area scrolls, not the modal */
+  .scoreboard-content {
+    flex: 1;
+    overflow-x: auto;   /* horizontal scroll ONLY here */
+    overflow-y: auto;
+  }
+
+  /* 🔑 TABLE FIX (THIS IS THE KEY PART) */
+  .scoreboard-content table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .scoreboard-content th,
+  .scoreboard-content td {
+    padding: 6px 8px;
+    font-size: 1rem;
+    white-space: normal;      /* allow wrapping */
+    word-break: break-word;   /* prevent overflow */
+  }
+}
+  .historyRow {
+    display: flex;          /* 👈 THIS is why nothing worked before */
+    column-gap: 6px;        /* space between player names */
+    row-gap: 4px;
+    flex-wrap: wrap;        /* allow wrap if names are long */
+    align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+    .methodOption label, .deadwoodRow label{
+         flex: 0 0 80px;        /* 👈 consistent label column */
+    max-width: 80px;
+    min-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    }
+}

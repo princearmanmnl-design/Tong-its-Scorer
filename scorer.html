@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tong-Its Scorer - Round Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <header class="scoreHeader">
+    <button id="backBtn" class="returnBtn"><i class='bx  bx-reply-big'></i></button>
+  </header>
+
+  <main class="roundDetails">
+    <div class="roundIndicator">
+      <h2>Round <span id="roundNumber">1</span></h2>
+    </div>
+    <!-- SECTION 1: Winner Selection -->
+    <section class="winnerSelection">
+      <h3>Winner</h3>
+      <div class="winnerScoreboard">
+      <div class="leftside">
+      <label for="winnerSelect">Select Winner:</label>
+      <select id="winnerSelect">
+        <option value="">Choose Player</option>
+        <option value="player1">Player 1</option>
+        <option value="player2">Player 2</option>
+        <option value="player3">Player 3</option>
+        <option value="player4">Player 4</option>
+      </select>
+      </div>
+      <div class="rightside">
+        <button class="scoreboardBtn"><i class='bx  bx-chevron-left'></i></button>
+      </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Method of Winning -->
+    <section class="winMethodSection">
+      <h3>Method of Winning</h3>
+
+      <label>
+        <input type="radio" name="winMethod" id="normalWin" value="normal">
+        Normal Win
+      </label>
+
+      <label>
+        <input type="radio" name="winMethod" id="tongitsWin" value="tongits">
+        Tong-Its
+      </label>
+
+      <label>
+        <input type="radio" name="winMethod" id="fightWin" value="fight">
+        Fight
+      </label>
+    </section>
+
+    <!-- SECTION 3: Special Cards / Hands Counters (use number inputs, - / + buttons) -->
+    <section class="specialCardsSection">
+      <h3>Special Cards / Hands (Winner)</h3>
+
+      <div class="cardDivs">
+        <label for="kingCount">King</label>
+        <input type="number" id="kingCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="aceCount">Ace</label>
+        <input type="number" id="aceCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="quadraCount">Quadra</label>
+        <input type="number" id="quadraCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="straightCount">Straight</label>
+        <input type="number" id="straightCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="multipleMeldsCount">Multiple Melds</label>
+        <input type="number" id="multipleMeldsCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+    </section>
+
+    <!-- SECTION 4: No-Meld Players -->
+    <section class="noMeldsSection">
+      <h3>No-Meld Players</h3>
+
+      <div class="cardDivs">
+        <input type="checkbox" id="player1NoMeld">
+        <label for="player1NoMeld">Player 1</label>
+      </div>
+
+      <div class="cardDivs">
+        <input type="checkbox" id="player2NoMeld">
+        <label for="player2NoMeld">Player 2</label>
+      </div>
+
+      <div class="cardDivs">
+        <input type="checkbox" id="player3NoMeld">
+        <label for="player3NoMeld">Player 3</label>
+      </div>
+
+      <div class="cardDivs">
+        <input type="checkbox" id="player4NoMeld">
+        <label for="player4NoMeld">Player 4</label>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Fighters & Deadwood -->
+    <section class="fightSection">
+      <h3>Fighters & Deadwood</h3>
+
+      <!-- Fighters selection -->
+      <div class="cardDivs">
+
+
+        <input type="checkbox" id="player1Fighter">
+        <label for="player1Fighter">P1</label>
+
+        <input type="checkbox" id="player2Fighter">
+        <label for="player2Fighter">P2</label>
+
+        <input type="checkbox" id="player3Fighter">
+        <label for="player3Fighter">P3</label>
+
+        <input type="checkbox" id="player4Fighter">
+        <label for="player4Fighter">P4</label>
+      </div>
+
+      <!-- Deadwood counters (use number inputs with +/-) -->
+      <div class="cardDivs">
+        <label for="player1Deadwood">P1 Deadwood</label>
+        <input type="number" id="player1Deadwood" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="player2Deadwood">P2 Deadwood</label>
+        <input type="number" id="player2Deadwood" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="player3Deadwood">P3 Deadwood</label>
+        <input type="number" id="player3Deadwood" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+
+      <div class="cardDivs">
+        <label for="player4Deadwood">P4 Deadwood</label>
+        <input type="number" id="player4Deadwood" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+    </section>
+<footer class="roundFooter">
+    <button id="prevRoundBtn"><i class='bx  bx-caret-big-left'></i>Previous Round</button>
+    <button id="nextRoundBtn">Next Round<i class='bx  bx-caret-big-right'></i> </i></button>
+    <button id="saveProgressBtn">Save Progress</button>
+</footer>
+  </main>
+<!-- SCOREBOARD MODAL (static markup) -->
+<div id="scoreboardModal" role="dialog" aria-hidden="true" class="scoreboard-modal" style="display:none;">
+  <div class="scoreboard-card">
+    <div class="scoreboard-header">
+      <h3>Scoreboard — Settlement Matrix</h3>
+      <button id="scoreboardCloseBtn" class="closeBtn">Close</button>
+    </div>
+    <div id="scoreboardContent" class="scoreboard-content"></div>
+  </div>
+</div>
+
+  <!-- FOOTER: prev / next / save -->
+<script src="scorer.js"></script>
+</body>
+</html>

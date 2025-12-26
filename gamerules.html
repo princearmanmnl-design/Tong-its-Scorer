@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tong-Its Scorer - Rules Set Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/3.0.6/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="gamerulesHeader">
+        <button class="returnBtn"><i class='bx  bx-reply-big'></i></button>
+    </header>
+<main class="setRules">
+        <h2>Game Rules & Settings</h2>
+    <section class="ruleContainer">
+        <section class="playerSection">
+            <h3>Players</h3>
+            <label for="numPlayers">Number of Players:</label>
+            <select id="numPlayers">
+            <option value="">Select</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            </select>
+            <div id="playerNames">
+            </div>
+        <!-- Dynamically generate player name inputs based on number of players -->
+            </div>
+        </section>
+
+        <section class="cardValuesSection">
+            <h3>Card Value</h3>
+
+            <div class="cardRow">
+                <input type="checkbox" id="kingChk" checked>
+                <label for="kingChk">King</label>
+                <input type="number" id="kingValue" placeholder="Value" min="0" value="2">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+
+            <div class="cardRow">
+                <input type="checkbox" id="queenChk">
+                <label for="queenChk">Queen</label>
+                <input type="number" id="queenValue" placeholder="Value" min="0" value="">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+
+            <div class="cardRow">
+                <input type="checkbox" id="jackChk">
+                <label for="jackChk">Jack</label>
+                <input type="number" id="jackValue" placeholder="Value" min="0" value="">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+
+            <div class="cardRow">
+                <input type="checkbox" id="aceChk" checked>
+                <label for="aceChk">Ace</label>
+                <input type="number" id="aceValue" placeholder="Value" min="0" value="2">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+            </section>
+
+        <section class="winBonusesSection">
+            <h3>Win Bonuses</h3>
+            <div class="bonusRow">
+                <input type="checkbox" id="tongitsChk" checked>
+                <label for="tongitsWinChk">Tong-Its Win</label>
+                <input type="number" id="tongitsValue" placeholder="Value" min="0" value="3">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+
+            <div class="bonusRow">
+                <input type="checkbox" id="normalWinChk" checked>
+                <label for="normalWinChk">NormalWin</label>
+                <input type="number" id="normalWinValue" placeholder="Value" min="0" value="2">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+
+            <div class="bonusRow">
+                <input type="checkbox" id="fightWinChk" checked>
+                <label for="fightWinChk">Fight</label>
+                <input type="number" id="fightWinValue" placeholder="Value" min="0" value="2">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+            </div>
+            </section>
+            
+        <section id="meldSection">
+            <h3>Meld & Special Hands</h3>
+
+            <div class="meldRow">
+              <input type="checkbox" id="quadraMeldChk" checked>
+              <label for="quadraMeldChk">Quadra</label>
+              <input type="number" id="quadraMeldValue" placeholder="Value" min="0" value="2">
+              <button class="decreaseBtn">-</button>
+              <button class="increaseBtn">+</button>
+            </div>
+            
+            <div class="meldRow">
+              <input type="checkbox" id="kindUpgradeChk" checked>
+              <label for="kindUpgradeChk">Quadra Upgrade</label>
+              <input type="number" id="quadraMeldValue" placeholder="Value" min="0" value="2">
+              <button class="decreaseBtn">-</button>
+              <button class="increaseBtn">+</button>
+            </div>
+        
+            <div class="meldRow">
+              <input type="checkbox" id="straightChk" checked>
+              <label for="straightChk">Straight</label>
+              <input type="number" id="straightValue" placeholder="Value" min="0" value="2">
+              <button class="decreaseBtn">-</button>
+              <button class="increaseBtn">+</button>
+            </div>
+        
+            <div class="meldRow">
+              <input type="checkbox" id="multipleMeldChk">
+              <label for="multipleMeldChk">Multiple Melds</label>
+              <input type="number" id="multipleMeldValue" placeholder="Value" min="0" value="">
+              <button class="decreaseBtn">-</button>
+              <button class="increaseBtn">+</button>
+            </div>
+        
+            <div class="meldRow">
+              <input type="checkbox" id="noMeldChk" checked>
+              <label for="noMeldChk">No Meld</label>
+              <input type="number" id="noMeldValue" placeholder="Penalty" min="0" value="2">
+              <button class="decreaseBtn">-</button>
+              <button class="increaseBtn">+</button>
+            </div>
+
+        </section>
+
+        <section id="winStreakSection">
+            <h3>Win Streak</h3>
+
+            <label for="stackableStreak">Stackable?</label>
+            <select id="stackableStreak">
+              <option value="yes">Yes</option>
+              <option value="no" selected>No</option>
+            </select>
+        
+            <!-- container for base price + per-stack -->
+            <div class="streakRow" style="margin-top:8px; display:flex; gap:12px; align-items:center;">
+              <!-- Base price: always shown -->
+              <div class="streakControl">
+                <label for="streakBase">Base price</label>
+                <input type="number" id="streakBase" value="3" min="0" />
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+              </div>
+          
+              <!-- Per-stack increment: only shown when stackable = yes -->
+              <div class="streakControl" id="streakPerStackWrap" style="display:flex; gap:8px; align-items:center;">
+                <label for="streakPerStack">Per-stack</label>
+                <input type="number" id="streakPerStack" value="0" min="0" />
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+              </div>
+            </div>
+        </section>
+        <section id="fightRulesSection">
+            <h3>Fight Rules</h3>
+    
+              <div class="methodOption">
+                <input type="checkbox" id="fighterPaysMoreChk" checked>
+                <label for="fighterPaysMoreChk">Fighter pays more than non-fighter</label>
+              </div>
+          
+              <div class="methodOption">
+                <label for="fighterLoss">Fighter loss </label>
+                <input type="number" id="fighterLoss" placeholder="Value" min="0" value="3">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+              </div>
+          
+              <div class="methodOption">
+                <label for="nonFighterLoss">Non-fighter loss </label>
+                <input type="number" id="nonFighterLoss" placeholder="Value" min="0" value="2">
+                <button class="decreaseBtn">-</button>
+                <button class="increaseBtn">+</button>
+              </div>
+            
+        
+            <!-- Count deadwood -->
+            <div class="deadwoodRow">
+              <input type="checkbox" id="countDeadwoodChk" checked>
+              <label for="countDeadwoodChk">Count Deadwood of Fighter </label>
+            
+              <label for="deadwoodValue">costs per point</label>
+              <input type="number" id="deadwoodValue" placeholder="Value" min="0" value="2">
+              <button class="decreaseBtn">-</button>
+              <button class="increaseBtn">+</button>
+            </div>
+        </section>
+
+    </section>
+    <footer class="gamerulesFooter">
+        <button id="resetRulesBtn">Reset Rules</button>
+        <button id="saveRulesBtn">Save Rules & Continue</button>
+    </footer>
+</main>
+
+<script src="gamerules.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const num = document.getElementById('numPlayers');
+  if (num) num.dispatchEvent(new Event('change'));
+});
+</script>
+</body>
+</html>
