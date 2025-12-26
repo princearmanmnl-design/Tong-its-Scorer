@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!rules || !Array.isArray(rules.players) || rules.players.length === 0) {
     alert('Game rules or players not found. Please set rules first.');
-    window.location.href = 'welcomepage.html';
+    window.location.href = 'index.html';
     return;
   }
 
@@ -712,7 +712,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       localStorage.setItem('tongitsSavedGame', JSON.stringify(savedGame));
-      window.location.href = 'welcomepage.html';
+      window.location.href = 'index.html';
     });
   }
 

@@ -180,7 +180,7 @@ const backBtn = document.querySelector('.gamerulesHeader .returnBtn');
 
 backBtn.addEventListener('click', () => {
     // Go back to Page 1
-    window.location.href = 'welcomepage.html'; // change this to your actual Page 1 filename
+    window.location.href = 'index.html'; // change this to your actual Page 1 filename
     // OR if you just want browser history:
     // window.history.back();
 });
