@@ -69,7 +69,21 @@
         <button type="button" class="decreaseBtn">-</button>
         <button type="button" class="increaseBtn">+</button>
       </div>
-
+      
+      <div class="cardDivs">
+        <label for="queenCount">Queen</label>
+        <input type="number" id="queenCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+      
+      <div class="cardDivs">
+        <label for="jackCount">Jack</label>
+        <input type="number" id="jackCount" class="counterInput" value="0" min="0" />
+        <button type="button" class="decreaseBtn">-</button>
+        <button type="button" class="increaseBtn">+</button>
+      </div>
+      
       <div class="cardDivs">
         <label for="aceCount">Ace</label>
         <input type="number" id="aceCount" class="counterInput" value="0" min="0" />
@@ -98,7 +112,17 @@
         <button type="button" class="increaseBtn">+</button>
       </div>
     </section>
-
+    <!-- Add after Special Cards section, before No-Meld Players -->
+    <section id="quadraUpgradeSection" class="quadraUpgradeSection">
+      <h3>Quadra Upgrade Owners</h3>
+      <div class="cardDivs">
+        <input type="checkbox" id="player1QuadraUpgrade"><label for="player1QuadraUpgrade">Player 1</label>
+        <input type="checkbox" id="player2QuadraUpgrade"><label for="player2QuadraUpgrade">Player 2</label>
+        <input type="checkbox" id="player3QuadraUpgrade"><label for="player3QuadraUpgrade">Player 3</label>
+        <input type="checkbox" id="player4QuadraUpgrade"><label for="player4QuadraUpgrade">Player 4</label>
+      </div>
+    </section>
+    
     <!-- SECTION 4: No-Meld Players -->
     <section class="noMeldsSection">
       <h3>No-Meld Players</h3>
