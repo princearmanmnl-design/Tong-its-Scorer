@@ -521,7 +521,7 @@ input[type="checkbox"] {
     text-overflow: ellipsis;
   }
 
-    @media (max-width: 480px) {
+
 
   /* Modal overlay */
   .scoreboard-modal {
@@ -563,7 +563,7 @@ input[type="checkbox"] {
     white-space: normal;      /* allow wrapping */
     word-break: break-word;   /* prevent overflow */
   }
-}
+
   .historyRow {
     display: flex;          /* 👈 THIS is why nothing worked before */
     column-gap: 6px;        /* space between player names */
@@ -583,4 +583,54 @@ input[type="checkbox"] {
     text-overflow: ellipsis;
 
     }
+}
+
+@media (max-width: 370px) {
+    
+  .cardRow label,
+  .bonusRow label,
+  .meldRow label,   
+  .cardDivs label {
+    flex: 0 0 55px;        /* 👈 consistent label column */
+    max-width: 55px;
+    min-width: 55px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+}
+
+@media (max-width: 345px) {
+    
+  .cardRow label,
+  .bonusRow label,
+  .meldRow label,   
+  .cardDivs label {
+    flex: 0 0 40px;        /* 👈 consistent label column */
+    max-width: 40px;
+    min-width: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
+}
+@media (max-width: 330px) {
+    
+  .cardRow label,
+  .bonusRow label,
+  .meldRow label,   
+  .cardDivs label {
+    flex: 0 0 30px;        /* 👈 consistent label column */
+    max-width: 30px;
+    min-width: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+
 }
