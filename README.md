@@ -22,5 +22,7 @@ Built to practice complex rule-based logic, state management, and dynamic UI upd
 
 ## Author
 **Prince Arman Gumapac**  
-GitHub: princearmanmnl-design/Tong-its-Scorer
-Live Demo: https://princearmanmnl-design.github.io/Tong-its-Scorer/
+
+## GitHub: princearmanmnl-design/Tong-its-Scorer
+
+## Live Demo: https://princearmanmnl-design.github.io/Tong-its-Scorer/
