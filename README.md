@@ -16,7 +16,7 @@ A browser-based scoring and round management web application for the card game *
 - Vanilla JavaScript
 - Local Storage
 - Git & GitHub
-- 
+  
 ## Live Demo:
 https://princearmanmnl-design.github.io/Tong-its-Scorer/
 
